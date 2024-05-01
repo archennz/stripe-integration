@@ -1,0 +1,215 @@
+interactions:
+- request:
+    body: name=test_2&email=test_2%40gmail.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '36'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Idempotency-Key:
+      - 2250bee0-2e74-4010-be7d-6bb44cd93a0d
+      Stripe-Version:
+      - '2024-04-10'
+      User-Agent:
+      - Stripe/v1 PythonBindings/9.4.0
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version": "9.4.0", "lang": "python", "publisher": "stripe", "httplib":
+        "requests", "lang_version": "3.12.2", "platform": "macOS-12.6.5-arm64-arm-64bit",
+        "uname": "Darwin Ans-MacBook-Pro.local 21.6.0 Darwin Kernel Version 21.6.0:
+        Thu Mar  9 20:12:21 PST 2023; root:xnu-8020.240.18.700.8~1/RELEASE_ARM64_T6000
+        arm64 arm"}'
+    method: POST
+    uri: https://api.stripe.com/v1/customers
+  response:
+    body:
+      string: "{\n  \"id\": \"cus_Q1XVLAogIAQPfJ\",\n  \"object\": \"customer\",\n
+        \ \"address\": null,\n  \"balance\": 0,\n  \"created\": 1714536368,\n  \"currency\":
+        null,\n  \"default_source\": null,\n  \"delinquent\": false,\n  \"description\":
+        null,\n  \"discount\": null,\n  \"email\": \"test_2@gmail.com\",\n  \"invoice_prefix\":
+        \"C3072DAB\",\n  \"invoice_settings\": {\n    \"custom_fields\": null,\n    \"default_payment_method\":
+        null,\n    \"footer\": null,\n    \"rendering_options\": null\n  },\n  \"livemode\":
+        false,\n  \"metadata\": {},\n  \"name\": \"test_2\",\n  \"next_invoice_sequence\":
+        1,\n  \"phone\": null,\n  \"preferred_locales\": [],\n  \"shipping\": null,\n
+        \ \"tax_exempt\": \"none\",\n  \"test_clock\": null\n}"
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET,HEAD,PUT,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required,
+        X-Stripe-Privileged-Session-Required
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '632'
+      Content-Security-Policy:
+      - report-uri https://q.stripe.com/csp-report?p=v1%2Fcustomers; block-all-mixed-content;
+        default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';
+        img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'
+      Content-Type:
+      - application/json
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to="coop"
+      Date:
+      - Wed, 01 May 2024 04:06:08 GMT
+      Idempotency-Key:
+      - 2250bee0-2e74-4010-be7d-6bb44cd93a0d
+      Original-Request:
+      - req_gsKHm1L41GCexZ
+      Report-To:
+      - '{"group":"coop","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/coop-report"}],"include_subdomains":true}'
+      Reporting-Endpoints:
+      - coop="https://q.stripe.com/coop-report"
+      Request-Id:
+      - req_gsKHm1L41GCexZ
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      Stripe-Should-Retry:
+      - 'false'
+      Stripe-Version:
+      - '2024-04-10'
+      Vary:
+      - Origin
+      X-Stripe-Routing-Context-Priority-Tier:
+      - api-testmode
+    status:
+      code: 200
+      message: OK
+- request:
+    body: customer=cus_Q1XVLAogIAQPfJ
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '27'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Idempotency-Key:
+      - 30d08dec-6e07-4ea4-8692-d3a975086abc
+      Stripe-Version:
+      - '2024-04-10'
+      User-Agent:
+      - Stripe/v1 PythonBindings/9.4.0
+      X-Stripe-Client-Telemetry:
+      - '{"last_request_metrics": {"request_id": "req_gsKHm1L41GCexZ", "request_duration_ms":
+        588}}'
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version": "9.4.0", "lang": "python", "publisher": "stripe", "httplib":
+        "requests", "lang_version": "3.12.2", "platform": "macOS-12.6.5-arm64-arm-64bit",
+        "uname": "Darwin Ans-MacBook-Pro.local 21.6.0 Darwin Kernel Version 21.6.0:
+        Thu Mar  9 20:12:21 PST 2023; root:xnu-8020.240.18.700.8~1/RELEASE_ARM64_T6000
+        arm64 arm"}'
+    method: POST
+    uri: https://api.stripe.com/v1/invoices
+  response:
+    body:
+      string: "{\n  \"id\": \"in_1PBUQm2LK0biYdVNiiAZZKmn\",\n  \"object\": \"invoice\",\n
+        \ \"account_country\": \"CA\",\n  \"account_name\": \"book shop\",\n  \"account_tax_ids\":
+        null,\n  \"amount_due\": 0,\n  \"amount_paid\": 0,\n  \"amount_remaining\":
+        0,\n  \"amount_shipping\": 0,\n  \"application\": null,\n  \"application_fee_amount\":
+        null,\n  \"attempt_count\": 0,\n  \"attempted\": false,\n  \"auto_advance\":
+        false,\n  \"automatic_tax\": {\n    \"enabled\": false,\n    \"liability\":
+        null,\n    \"status\": null\n  },\n  \"billing_reason\": \"manual\",\n  \"charge\":
+        null,\n  \"collection_method\": \"charge_automatically\",\n  \"created\":
+        1714536368,\n  \"currency\": \"cad\",\n  \"custom_fields\": null,\n  \"customer\":
+        \"cus_Q1XVLAogIAQPfJ\",\n  \"customer_address\": null,\n  \"customer_email\":
+        \"test_2@gmail.com\",\n  \"customer_name\": \"test_2\",\n  \"customer_phone\":
+        null,\n  \"customer_shipping\": null,\n  \"customer_tax_exempt\": \"none\",\n
+        \ \"customer_tax_ids\": [],\n  \"default_payment_method\": null,\n  \"default_source\":
+        null,\n  \"default_tax_rates\": [],\n  \"description\": null,\n  \"discount\":
+        null,\n  \"discounts\": [],\n  \"due_date\": null,\n  \"effective_at\": null,\n
+        \ \"ending_balance\": null,\n  \"footer\": null,\n  \"from_invoice\": null,\n
+        \ \"hosted_invoice_url\": null,\n  \"invoice_pdf\": null,\n  \"issuer\": {\n
+        \   \"type\": \"self\"\n  },\n  \"last_finalization_error\": null,\n  \"latest_revision\":
+        null,\n  \"lines\": {\n    \"object\": \"list\",\n    \"data\": [],\n    \"has_more\":
+        false,\n    \"total_count\": 0,\n    \"url\": \"/v1/invoices/in_1PBUQm2LK0biYdVNiiAZZKmn/lines\"\n
+        \ },\n  \"livemode\": false,\n  \"metadata\": {},\n  \"next_payment_attempt\":
+        null,\n  \"number\": null,\n  \"on_behalf_of\": null,\n  \"paid\": false,\n
+        \ \"paid_out_of_band\": false,\n  \"payment_intent\": null,\n  \"payment_settings\":
+        {\n    \"default_mandate\": null,\n    \"payment_method_options\": null,\n
+        \   \"payment_method_types\": null\n  },\n  \"period_end\": 1714536368,\n
+        \ \"period_start\": 1714536368,\n  \"post_payment_credit_notes_amount\": 0,\n
+        \ \"pre_payment_credit_notes_amount\": 0,\n  \"quote\": null,\n  \"receipt_number\":
+        null,\n  \"rendering\": {\n    \"amount_tax_display\": null,\n    \"pdf\":
+        {\n      \"page_size\": \"auto\"\n    }\n  },\n  \"shipping_cost\": null,\n
+        \ \"shipping_details\": null,\n  \"starting_balance\": 0,\n  \"statement_descriptor\":
+        null,\n  \"status\": \"draft\",\n  \"status_transitions\": {\n    \"finalized_at\":
+        null,\n    \"marked_uncollectible_at\": null,\n    \"paid_at\": null,\n    \"voided_at\":
+        null\n  },\n  \"subscription\": null,\n  \"subscription_details\": {\n    \"metadata\":
+        null\n  },\n  \"subtotal\": 0,\n  \"subtotal_excluding_tax\": 0,\n  \"tax\":
+        null,\n  \"test_clock\": null,\n  \"total\": 0,\n  \"total_discount_amounts\":
+        [],\n  \"total_excluding_tax\": 0,\n  \"total_tax_amounts\": [],\n  \"transfer_data\":
+        null,\n  \"webhooks_delivered_at\": 1714536368\n}"
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET,HEAD,PUT,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required,
+        X-Stripe-Privileged-Session-Required
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2630'
+      Content-Security-Policy:
+      - report-uri https://q.stripe.com/csp-report?p=v1%2Finvoices; block-all-mixed-content;
+        default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';
+        img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'
+      Content-Type:
+      - application/json
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to="coop"
+      Date:
+      - Wed, 01 May 2024 04:06:09 GMT
+      Idempotency-Key:
+      - 30d08dec-6e07-4ea4-8692-d3a975086abc
+      Original-Request:
+      - req_7wO51igOUPp0HE
+      Report-To:
+      - '{"group":"coop","max_age":8640,"endpoints":[{"url":"https://q.stripe.com/coop-report"}],"include_subdomains":true}'
+      Reporting-Endpoints:
+      - coop="https://q.stripe.com/coop-report"
+      Request-Id:
+      - req_7wO51igOUPp0HE
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      Stripe-Should-Retry:
+      - 'false'
+      Stripe-Version:
+      - '2024-04-10'
+      Vary:
+      - Origin
+      X-Stripe-Routing-Context-Priority-Tier:
+      - api-testmode
+    status:
+      code: 200
+      message: OK
+version: 1
